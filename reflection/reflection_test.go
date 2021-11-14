@@ -27,6 +27,14 @@ func TestWalk(t *testing.T) {
 			}{"Chirs", "London"},
 			[]string{"Chirs", "London"},
 		},
+		{
+			"Struct with non string field",
+			struct {
+				Name string
+				Age  int
+			}{"Chirs", 33},
+			[]string{"Chirs"},
+		},
 	}
 
 	for _, test := range cases {
